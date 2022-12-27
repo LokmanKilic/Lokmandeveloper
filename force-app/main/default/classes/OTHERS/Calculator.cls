@@ -4,7 +4,6 @@ public class Calculator {
 
     }
 
-
     public void printNewMessage(string msg){
 
         system.debug(msg);
