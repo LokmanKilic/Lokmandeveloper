@@ -14,5 +14,7 @@
         List<Double> amsterdamOfHot = new List<Double>{7.5, 6.4, 1.3, 15.5, 8.7, 2.2, 2.3};
         cityOfHot.put('amsterdam', amsterdamOfHot);
         
-        //MapAssignment.degreeOfCities(cityOfHot);
+        MapAssignment.degreeOfCities(cityOfHot);
         MapAssignment.averageDegreeOfCities(cityOfHot);
+
+        

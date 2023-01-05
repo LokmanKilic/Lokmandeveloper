@@ -6,12 +6,15 @@ public class ParametreliMetotlar{
    }
 
    //Bu metot parametre olarak integer bir deger alsin. Bu integer degerin kac rakamdan olustugunu return etsin.
-   public integer rakamSayisi(integer sayi){
+   public  integer rakamSayisi(integer sayi){
          string strSy = String.valueOf(sayi);
          //return strSy.length();
          integer rkmSys = strSy.length();
          return rkmSys;
+
+         
    }
+
 
    // 2 integer sayinin toplamini return etsin.
    public integer sum(integer a, integer b){

@@ -19,7 +19,7 @@ public  class MapAssignment {
             System.debug(city + ' icin son 1 haftanin sicaklik degerleri = ' + cityOfHot3.get(city));
             Double sum = 0;
             for (double eachDegree : cityOfHot3.get(city)) {
-                sum += eachDegree;
+                sum = eachDegree;
             }
             double ort = sum/cityOfHot3.get(city).size();
             averageHot.put(city, ort);
