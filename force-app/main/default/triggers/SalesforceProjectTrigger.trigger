@@ -2,19 +2,16 @@ trigger SalesforceProjectTrigger on Salesforce_Project__c (before insert, after 
      
     
     
-    
-    
         if (Trigger.isAfter && Trigger.isInsert) {
              //call trigger handler to CREATE salesforce ticket.
              SalesforceProjectTriggerHandler.createDefaultTicket(Trigger.New);
-
-              // call future method
-
-              System.debug('calling future method NOW');
-              SalesforceProjectTriggerHandler.spUpdateDescription();
-              System.debug('called future method. DONE');
-
-
+    
+             //call future method,
+             system.debug('calling future method NOW.');
+             Map<id, Salesforce_Project__c> spNewMap = trigger.newMap;
+             SalesforceProjectTriggerHandler.spUpdateDescription(spNewMap.keySet());
+             system.debug('called future method. DONE.');
+    
         }
         if (Trigger.isBefore && trigger.isUpdate) {
             //call validation method here.
@@ -22,9 +19,7 @@ trigger SalesforceProjectTrigger on Salesforce_Project__c (before insert, after 
         }
        
     }
-    
-    
-    
+   
 //=====================================================================================
 
     

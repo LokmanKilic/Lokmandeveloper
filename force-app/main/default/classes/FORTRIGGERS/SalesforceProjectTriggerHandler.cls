@@ -44,22 +44,25 @@
         }
    
         @future
-        
-        public static void spUpdateDescription() {
-
-            System.debug('inside future method.Huhuuu');
-            
+    public static void spUpdateDescription(Set<id> setSPId) {
+        system.debug('inside future method. Huhuuu');
+        List<Salesforce_Project__c> allSP = [select id, description__c from Salesforce_Project__c where id in :setSPId];
+        for (salesforce_project__c eachSP : allSP) {
+            eachSP.Description__c += '. Updated from future';
         }
-
-
-
-
-
-
-
-
-
+        update allSP;
     }
+}
+
+
+
+
+
+
+
+
+
+    
 
 
 
